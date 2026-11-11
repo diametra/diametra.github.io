@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guida a Diametra · Il primo rilievo</title>
+<meta name="description" content="Un rilievo completo con una planimetria di esempio: dall'importazione al disegno quotato e al report PDF.">
+<meta name="theme-color" content="#1f5c3a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.svg" alt="">DIAMETRA</a>
+    <nav aria-label="Sezioni">
+      <a href="./#funzioni">Funzioni</a>
+      <a href="./#installa">Installa</a>
+      <a href="guida.html" aria-current="page">Guida</a>
+      <a href="app/">Prova nel browser</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">GUIDA · IL PRIMO RILIEVO</p>
+        <h1>Un rilievo completo in dieci minuti.</h1>
+        <p class="lead">Scarica la planimetria di esempio e seguila passo per passo: importi la piantina, misuri sette vani, vedi il disegno quotato e il confronto con la planimetria, esporti il report.</p>
+        <div class="actions">
+          <a class="button primary" href="esempio/planimetria-esempio.pdf" download>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg>
+            Scarica la planimetria di esempio
+          </a>
+          <a class="button" href="app/">Apri Diametra nel browser</a>
+        </div>
+        <p class="meta">PDF, A4, scala 1:200. L'appartamento è inventato: non corrisponde a nessun immobile.</p>
+      </div>
+      <div class="phone"><img src="img/guida/03-ambienti.png" width="412" height="915" alt="La planimetria di esempio importata, con i sette vani riconosciuti"></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Prima di cominciare</h2>
+      <p class="intro">Puoi usare l'app Android o la versione nel browser: i passi sono gli stessi. Sul telefono salva la planimetria di esempio nei download; dal computer basta scaricarla.</p>
+      <ol class="toc">
+        <li><a href="#crea">Crea il rilievo</a></li>
+        <li><a href="#anagrafica">Compila l'anagrafica</a></li>
+        <li><a href="#importa">Importa la planimetria</a></li>
+        <li><a href="#nomi">Dai un nome ai vani</a></li>
+        <li><a href="#misura">Misura il primo vano</a></li>
+        <li><a href="#comandi">Misura con un comando o a voce</a></li>
+        <li><a href="#strumenti">Metro laser e fotocamera</a></li>
+        <li><a href="#disegno">Guarda il disegno quotato</a></li>
+        <li><a href="#confronto">Controlla il confronto</a></li>
+        <li><a href="#esporta">Esporta report, DXF e backup</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="guide-step" id="crea">
+        <div>
+          <span class="step-number">PASSO 01</span>
+          <h2>Crea il rilievo</h2>
+          <p>Nella pagina <strong>Progetti</strong> scrivi il nome del progetto, per esempio <code>Esempio Via Immaginaria</code>, e tocca <strong>Crea progetto</strong>.</p>
+          <p>L'elenco mostra per ogni rilievo indirizzo, dati catastali, vani misurati, superficie netta e stato: NUOVO, IN CORSO o COMPLETATO.</p>
+        </div>
+        <div class="phone"><img src="img/guida/01-nuovo.png" width="412" height="915" alt="Pagina Rilievi con il nome del nuovo progetto" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="anagrafica">
+        <div>
+          <span class="step-number">PASSO 02</span>
+          <h2>Compila l'anagrafica</h2>
+          <p>Apri la scheda <strong>Anagrafica</strong> e inserisci committente, indirizzo, comune, piano, foglio, particella, subalterno e tecnico. Per l'esempio usa i dati del cartiglio: Comune ESEMPIO, Via Immaginaria 1, Foglio 0, Particella 0, Subalterno 0.</p>
+          <p>Ogni campo si salva quando passi al successivo. Tutto è facoltativo: questi dati compaiono nel cartiglio del report PDF e nell'elenco dei rilievi.</p>
+        </div>
+        <div class="phone"><img src="img/guida/02-anagrafica.png" width="412" height="915" alt="Scheda Anagrafica con committente, immobile e dati catastali" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="importa">
+        <div>
+          <span class="step-number">PASSO 03</span>
+          <h2>Importa la planimetria</h2>
+          <p>Torna su <strong>Raccogli</strong>, tocca <strong>Importa piantina</strong> e scegli <code>planimetria-esempio.pdf</code>. In pochi secondi Diametra propone il contorno di sette vani.</p>
+          <ul>
+            <li>La <strong>scala</strong> è 1:200, come sul cartiglio. L'app legge anche la barra blu «10 metri» sul margine, come nelle planimetrie del Catasto.</li>
+            <li>Tocca un vano sulla piantina per escluderlo o rimetterlo.</li>
+            <li>Su una planimetria vera, se due stanze risultano unite scegli 1:100 e tocca <strong>Ricalcola</strong>. Se manca una stanza, tocca due volte al suo centro.</li>
+            <li>Due dita ingrandiscono la piantina; il pulsante con la freccia circolare la ruota di un quarto di giro.</li>
+          </ul>
+        </div>
+        <div class="phone"><img src="img/guida/03-ambienti.png" width="412" height="915" alt="Sette vani proposti sulla planimetria di esempio" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="nomi">
+        <div>
+          <span class="step-number">PASSO 04</span>
+          <h2>Dai un nome ai vani</h2>
+          <p>Apri <strong>Nomi (7 proposte)</strong> e scrivi i nomi in ordine: Soggiorno, Cucina, Disimpegno, Camera, Cameretta, Bagno, Ripostiglio. Il numero di ogni vano è scritto al centro del suo contorno.</p>
+          <p>Poi tocca <strong>Usa questi 7 vani</strong>. Se preferisci, i nomi si cambiano anche dopo, toccando il nome in cima alla scheda di misura.</p>
+        </div>
+        <div class="phone"><img src="img/guida/04-nomi.png" width="412" height="915" alt="Elenco dei sette vani con i nomi inseriti" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="misura">
+        <div>
+          <span class="step-number">PASSO 05</span>
+          <h2>Misura il primo vano</h2>
+          <p>Si apre <strong>Misura vano</strong> sul Soggiorno. Scrivi <strong>L1</strong> (lunghezza, il lato lungo), <strong>L2</strong> (larghezza, il lato corto) e <strong>H</strong> (altezza netta). Il tasto Invio della tastiera passa al campo successivo.</p>
+          <p>Tocca <strong>Registra e avanti</strong>: la misura è salvata e si apre il vano seguente. Sopra i campi vedi le misure già registrate, la superficie netta e il perimetro.</p>
+          <p><strong>Diagonale, se vuoi controllare la squadratura.</strong> Quando lunghezza e larghezza di un vano sono registrate compare il campo <strong>D</strong> (diagonale, da spigolo a spigolo, facoltativa). Se la diagonale misurata si discosta da quella di un vano in squadra più del doppio della tolleranza del progetto, Diametra avvisa: «Fuori squadra: diagonale misurata 6,55 m, attesa 6,50 m (differenza 5,3 cm)». L'avviso compare nella scheda del vano, nel nuovo disegno, in Revisiona e nel report PDF.</p>
+          <p><strong>Altezza e tipo di soffitto.</strong> L'altezza è una misura richiesta: finché manca, la scheda del vano dice «Da rilevare: altezza» e il report la elenca tra le misure mancanti; il rilievo si salva comunque. Sopra l'altezza c'è il menù <strong>Soffitto</strong>: piano (il solito), inclinato a una falda, a due falde, oppure una volta (a botte, a crociera, a padiglione, a vela, a schifo, a stella, a cupola). Con un soffitto non piano compaiono due altezze, <strong>H1</strong> e <strong>H2</strong>: minima e massima per le falde, imposta e chiave per le volte (per la volta a schifo la chiave è l'altezza della parte piana). Diametra calcola l'<strong>altezza media</strong>, stimata per le volte, e la usa nel disegno, nel report e nel DXF. Se cambi il tipo di soffitto dopo aver misurato l'altezza, le altezze di prima vengono escluse (restano nel registro, segnate come escluse) e vanno misurate di nuovo per il soffitto scelto: la scheda lo dice.</p>
+          <p><strong>Lati, per un vano non rettangolare.</strong> Nel <strong>Nuovo disegno</strong> le pareti del vano selezionato hanno una lettera: a, b, c… Tocca una parete e nella scheda compare il campo <strong>Lato</strong> con la sua lettera: scrivi la misura e tocca <strong>Registra lato</strong>. Il lato diventa una quota nel disegno, nel DXF e nel report. Funziona sui vani trovati o ricalcati sulla piantina. Se gli angoli del vano sono retti, con tutti i lati (o quasi: ne può mancare uno per direzione) Diametra ricostruisce la forma vera e calcola superficie e perimetro dai lati, non più stimati: la scheda scrive «dai lati misurati» e non chiede lunghezza e larghezza. Se i lati non chiudono oltre la tolleranza del progetto compare l'avviso «Lati che non chiudono» con l'errore in centimetri: ricontrolla le misure.</p>
+          <p>Le misure dell'esempio:</p>
+          <table class="measures">
+            <thead><tr><th>Vano</th><th>L1</th><th>L2</th><th>H</th></tr></thead>
+            <tbody>
+              <tr><td>01 Soggiorno</td><td>5,85</td><td>4,35</td><td>2,70</td></tr>
+              <tr><td>02 Cucina</td><td>3,85</td><td>2,95</td><td>2,70</td></tr>
+              <tr><td>03 Disimpegno</td><td>3,85</td><td>1,25</td><td>2,70</td></tr>
+              <tr><td>04 Camera</td><td>4,05</td><td>3,85</td><td>2,70</td></tr>
+              <tr class="wrong"><td>05 Cameretta</td><td>3,85</td><td>3,35</td><td>2,70</td></tr>
+              <tr><td>06 Bagno</td><td>2,65</td><td>2,35</td><td>2,70</td></tr>
+              <tr><td>07 Ripostiglio</td><td>2,65</td><td>1,35</td><td>2,70</td></tr>
+            </tbody>
+          </table>
+          <p>La larghezza della Cameretta è sbagliata di proposito: al passo 9 vedrai come Diametra la segnala.</p>
+        </div>
+        <div class="phone"><img src="img/guida/05-misura.png" width="412" height="915" alt="Scheda di misura del Soggiorno con L1 5,85, L2 4,35 e H 2,70" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="comandi">
+        <div>
+          <span class="step-number">PASSO 06</span>
+          <h2>Misura con un comando o a voce</h2>
+          <p>Nel campo <strong>Comando scritto o dettato</strong> puoi registrare un vano qualsiasi in una riga, senza cercarlo nella lista:</p>
+          <ul>
+            <li><code>cucina misura 3,85 per 2,95 h 2,70</code></li>
+            <li><code>stanza 4 misura 4,05 per 3,85 h 2,70</code></li>
+            <li><code>stanza 2 nome Cucina abitabile</code> per rinominare</li>
+            <li><code>diagonale 6,40</code> (anche <code>stanza 4 diagonale 6,40</code>) per la diagonale di controllo</li>
+            <li><code>lato c 2,35</code> (anche <code>lato a 4,80 lato b 3,20</code>) per i lati di un vano non rettangolare, con le lettere del nuovo disegno; a voce si dice «lato ci due e trentacinque»</li>
+            <li><code>altezza minima 2,10</code> e <code>altezza massima 3,40</code> per un soffitto inclinato, <code>imposta 2,80</code> e <code>chiave 3,60</code> per una volta: prima scegli il tipo di soffitto nel menù</li>
+            <li><code>porta 80 per 210</code> o <code>finestra 120 per 140</code>, in centimetri o in metri: l'altezza è facoltativa. Aggiungi <code>a 45 dallo spigolo</code> se hai misurato la distanza dallo spigolo alla spalletta, <code>muro 30</code> per lo spessore del muro letto sulla spalletta e, per le finestre, <code>davanzale 90</code> per l'altezza del davanzale (es. <code>finestra 120 per 140 davanzale 90 muro 30</code>)</li>
+            <li><code>aggiungi nota in questo ambiente ci sono delle infiltrazioni dal tetto</code>: il testo si aggiunge alla nota del vano</li>
+          </ul>
+          <p>Poi tocca <strong>Esegui comando</strong>. Per dettare, <strong>tieni premuto «Tieni premuto e detta»</strong> mentre parli e lascialo quando hai finito, come un vocale: il testo compare nel campo e lo controlli prima di eseguirlo. Per i decimali puoi dire «cinque e dieci» oppure «cinque virgola dieci»: diventano 5,10.</p>
+          <p>Nell'app Android la dettatura è immediata e ascolta solo numeri, parole delle misure e nomi dei vani; dopo «nota» ascolta invece qualsiasi parola. Nel browser è più lenta.</p>
+          <p>Il tasto nero <strong>Tieni premuto e detta</strong> è subito sotto i campi di misura: quando lo lasci, «Ho sentito…» compare lì sotto con il tasto <strong>Esegui</strong>.</p>
+          <p><strong>Schizzo del vano</strong> apre un foglio a quadretti. Disegna il perimetro con il dito: appena lo chiudi diventa una forma con pareti dritte e angoli retti. Puoi anche partire da <strong>Rettangolo</strong> o <strong>Forma a L</strong>, trascinare gli angoli e tirare un lato per fare una rientranza; con <strong>Matita</strong> aggiungi porte e finestre. Alla fine scegli se lo schizzo va al posto del vano nel nuovo disegno o accanto: è in scala con le misure e lo sposti trascinandolo.</p>
+          <p><strong>Dove sono porte e finestre.</strong> Nei vani ricalcati sulla piantina, dopo una porta o una finestra dettata si apre il nuovo disegno: tocca la parete dove si trova, vicino allo spigolo da cui hai misurato. Con il modulo scritto resti sul modulo, pronto per la prossima apertura, e la posizioni con <strong>Posiziona</strong> sulla sua riga. La distanza detta con il comando parte da quello spigolo, segnato da un pallino; senza distanza vale il punto toccato. Con <strong>Più tardi</strong> la posizioni dopo, con <strong>Posiziona</strong> o <strong>Sposta</strong> nell'elenco delle aperture, dove puoi anche scrivere la distanza dallo spigolo, lo spessore del <strong>Muro</strong> e il <strong>Davanzale</strong> delle finestre (campi facoltativi, anche nel modulo per aggiungere un'apertura). Lo spessore misurato su un'apertura posizionata vale per tutta la sua parete.</p>
+          <p>Sotto il vano, in <strong>Porte, finestre, foto e note</strong>, <strong>Foto</strong> apre la fotocamera e <strong>Allega</strong> aggiunge foto dalla galleria o documenti (PDF, Word, Excel, testo). La × su ciascuno lo rimuove.</p>
+        </div>
+        <div class="phone"><img src="img/guida/06-comando.png" width="412" height="915" alt="Campo comando con il testo cameretta misura 3,85 per 3,35 h 2,70" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="strumenti">
+        <div>
+          <span class="step-number">PASSO 07</span>
+          <h2>Metro laser e fotocamera</h2>
+          <p>Apri le <strong>Impostazioni</strong> con l'ingranaggio in alto a destra.</p>
+          <ul>
+            <li><strong>Uso un metro laser</strong>: spegne la misura con la fotocamera, così non la usi per sbaglio. Le misure lette sul laser le scrivi o le detti.</li>
+            <li><strong>Associa Leica DISTO</strong> (D1, D110, D2 e gli altri DISTO con Bluetooth): da quel momento, quando premi il tasto di misura sul laser, il valore entra da solo nel campo riquadrato in verde.</li>
+            <li>Senza laser, nell'app Android trovi <strong>Misura … con la fotocamera</strong>: punti l'inizio («Segna inizio»), poi la fine («Segna fine»), e con <strong>Usa</strong> il valore entra nel campo. Sbaglia di qualche centimetro: usala per un controllo, non al posto del metro.</li>
+            <li><strong>Misura al volo</strong>: il righello in alto, accanto all'ingranaggio, misura con la fotocamera da qualsiasi schermata, senza registrare nulla nel rilievo. Dopo «Segna fine» la misura resta fissata con una lettera (A, B, C…) e puoi prenderne subito un'altra nella stessa inquadratura, per esempio larghezza e altezza di una porta. «Scatta foto» chiude la misura e prepara l'immagine con le misure disegnate sopra e il nome del progetto aperto; nella finestra che segue scegli <strong>Salva in galleria</strong> o <strong>Condividi</strong>. Per uscire senza foto c'è «Fine senza foto». Utile per una porta o un mobile da controllare al volo.</li>
+          </ul>
+        </div>
+        <div class="phone"><img src="img/guida/09-impostazioni.png" width="412" height="915" alt="Impostazioni con l'opzione metro laser e l'associazione del Leica DISTO" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="disegno">
+        <div>
+          <span class="step-number">PASSO 08</span>
+          <h2>Guarda il disegno quotato</h2>
+          <p>Sopra la piantina tocca <strong>Nuovo disegno</strong>. Ogni vano misurato è disegnato con le quote che hai inserito, il nome, la superficie e l'altezza; i vani ancora da misurare sono tratteggiati. Tocca un vano per aprirne la misura.</p>
+          <p>La Cameretta ha il contorno rosso: le sue misure non tornano con la forma sulla planimetria.</p>
+        </div>
+        <div class="phone"><img src="img/guida/07-disegno.png" width="412" height="915" alt="Disegno quotato dei sette vani, con la Cameretta evidenziata in rosso" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="confronto">
+        <div>
+          <span class="step-number">PASSO 09</span>
+          <h2>Controlla il confronto con la planimetria</h2>
+          <p>Apri la scheda <strong>Revisiona</strong>. Per ogni vano vedi le misure prese e quelle ricavate dalla planimetria in scala: Diametra segnala le differenze oltre il 5% e 15 cm.</p>
+          <p>La Cameretta è segnalata: sulla planimetria è larga circa 2,85 m, non 3,35. Correggila con il comando <code>cameretta misura 3,85 per 2,85</code> e la segnalazione sparisce.</p>
+          <p>Il confronto aiuta a capire dove guardare meglio durante il sopralluogo: la verifica di conformità resta del tecnico.</p>
+        </div>
+        <div class="phone"><img src="img/guida/08-revisiona.png" width="412" height="915" alt="Scheda Revisiona con un vano diverso dalla planimetria" loading="lazy"></div>
+      </div>
+
+      <div class="guide-step" id="esporta">
+        <div>
+          <span class="step-number">PASSO 10</span>
+          <h2>Esporta report, DXF e backup</h2>
+          <ul>
+            <li><strong>Report PDF</strong>: cartiglio con i dati dell'anagrafica, tabella delle misure per vano, confronto con la planimetria e disegno quotato.</li>
+            <li><strong>DXF per CAD</strong>: il disegno in metri per AutoCAD, BricsCAD o LibreCAD, con un livello separato per i contorni della planimetria.</li>
+            <li><strong>Condividi / backup</strong>: un file con tutto il rilievo, foto e allegati compresi. Salvalo in una cartella di Drive o OneDrive condivisa, o mandalo a un collega: lo apre con <strong>Importa archivio</strong>, lo modifica e te lo rimanda. Quando importi un'altra versione dello stesso rilievo, Diametra ti propone prima di <strong>unirle</strong>: tiene le misure, le letture e le foto di entrambe; dove avete cambiato la stessa cosa (il nome di un vano, il contorno, il tipo di soffitto, lo spessore di un muro…) vince la versione salvata per ultima, e alla fine un riepilogo elenca cosa è stato aggiunto e ogni differenza decisa così, da controllare. Una cosa cancellata da uno dei due torna dalla versione dell'altro. In alternativa puoi aggiornare il tuo con il file ricevuto, se è più recente, o importarlo come copia separata. Se in studio usi Diametra PRO, salva sempre nella stessa cartella <strong>Diametra</strong> di OneDrive o Drive: da lì PRO lo importa con <strong>Importa da Diametra</strong>.</li>
+          </ul>
+          <p>Sul telefono i file si aprono nel menu Condividi: puoi salvarli o mandarli per e-mail o WhatsApp.</p>
+          <p class="note">I dati restano sul dispositivo. Disinstallare l'app o cancellare i dati del browser cancella i rilievi: fai sempre il backup di quelli che ti servono.</p>
+        </div>
+        <div class="phone"><img src="img/guida/10-report.png" width="412" height="583" alt="Prima pagina del report PDF dell'esempio" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Se qualcosa non va</h2>
+      <div class="grid">
+        <div><h3>Due stanze unite</h3><p>Scegli la scala 1:100 e tocca Ricalcola, oppure usa Seleziona zona per analizzare solo il disegno.</p></div>
+        <div><h3>Manca una stanza</h3><p>Tocca due volte al centro della stanza sulla piantina, o aggiungila con + nella lista dei vani.</p></div>
+        <div><h3>La dettatura non capisce</h3><p>Parla vicino al telefono e usa le parole delle misure. Un nome nuovo va scritto: la dettatura conosce solo i nomi dei vani già presenti.</p></div>
+        <div><h3>Valore rifiutato</h3><p>Le misure impossibili, come una larghezza di 30 m, vengono rifiutate: controlla il testo e correggilo.</p></div>
+        <div><h3>Il DISTO non si collega</h3><p>Accendilo vicino al telefono e attiva il suo Bluetooth: Diametra riprova da sola ogni pochi secondi. Il DISTO deve essere in metri.</p></div>
+        <div><h3>Ho perso un rilievo</h3><p>Se avevi fatto il backup, riaprilo con Importa archivio nella pagina Rilievi.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">DIAMETRA · GUIDA</span>
+    <span><a href="./">Torna alla pagina principale</a></span>
+  </div>
+</footer>
+</body>
+</html>
